@@ -10,6 +10,7 @@ public class FieldOfView : MonoBehaviour
     private Vector3 origin;
     private float startingAngle;
     public float viewDistance = 25f;
+    [SerializeField] private int rayCount = 50;
     [SerializeField]    private float fov = 90;
     private void Start()
     {
@@ -22,7 +23,6 @@ public class FieldOfView : MonoBehaviour
 
 
 
-        int rayCount = 50;
         float angle = startingAngle;
         float angleIncrease = fov / rayCount;
        

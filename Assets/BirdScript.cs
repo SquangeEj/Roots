@@ -9,9 +9,11 @@ public class BirdScript : MonoBehaviour
     private float volume = 0;
     private AudioSource ADS;
     public bool Active;
+    [SerializeField] private SpriteRenderer SPRT;
     void Start()
     {
-        ADS = GetComponent<AudioSource>();   
+        ADS = GetComponent<AudioSource>();
+        
     }
 
     // Update is called once per frame
@@ -19,6 +21,18 @@ public class BirdScript : MonoBehaviour
     {
         if (Active == true)
         {
+
+            Vector3 localPos = Target.transform.InverseTransformPoint(transform.position);
+            if (localPos.x < 0.0f)
+            {
+                SPRT.flipX = false;
+            }
+            else if (localPos.x > 0.0f)
+            {
+                SPRT.flipX = true;
+            }
+            else return;
+
             if (volume < 1)
             {
                 volume += 1 * Time.deltaTime;
@@ -29,4 +43,6 @@ public class BirdScript : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, Target.transform.position, Speed * Time.deltaTime);
         }
     }
+
+    
 }

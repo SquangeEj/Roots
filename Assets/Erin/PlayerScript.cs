@@ -5,11 +5,14 @@ using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
 {
+
+    [SerializeField] private Animator anim;
+    [SerializeField] private SpriteRenderer SpriteRend;
     [SerializeField] private FieldOfView fovscript;
     [SerializeField] private float Speed = 5;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Slider Sldr;
-    private float stamina = 6f;
+    private float stamina = 15f;
     private Vector2 UserInput;
 
     [SerializeField] private float Timer = 600;
@@ -37,6 +40,17 @@ public class PlayerScript : MonoBehaviour
         Timer -= 1 * Time.deltaTime;
         
         UserInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+
+
+   /*     if(Input.GetAxis("Horizontal") <0)
+        {
+            SpriteRend.flipX = false;
+        }
+        else if(Input.GetAxis("Horizontal") > 0)
+        {
+            SpriteRend.flipX = true;
+        }*/
+     anim.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
         
     }
 
@@ -49,7 +63,7 @@ public class PlayerScript : MonoBehaviour
         }
         else
         {
-            if (stamina < 6f)
+            if (stamina < 15f)
             {
                 stamina += 1 * (Time.deltaTime * (Timer/1200)) ;
             }
