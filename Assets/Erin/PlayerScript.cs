@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
 {
+    [SerializeField] private FieldOfView fovscript;
     [SerializeField] private float Speed = 5;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Slider Sldr;
@@ -22,6 +23,17 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 direction = (Vector2)((worldMousePos - transform.position));
+        direction.Normalize();
+        
+
+        fovscript.viewDistance = 25 * Timer/ 600;
+        fovscript.SetAimDirection(direction);
+        fovscript.SetOrigin(transform.position);
+            
+
         Timer -= 1 * Time.deltaTime;
         
         UserInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
