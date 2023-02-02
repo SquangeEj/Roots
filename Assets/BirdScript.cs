@@ -44,5 +44,13 @@ public class BirdScript : MonoBehaviour
         }
     }
 
-    
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<PlayerScript>().Timer -= 2;
+        }
+    }
+
+
 }
