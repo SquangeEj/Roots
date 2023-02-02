@@ -11,12 +11,32 @@ public class BirdTrigger : MonoBehaviour
     [SerializeField]
     private CinemachineVirtualCamera Vcam2;
 
+    [SerializeField] private GameObject PlayerVision;
+    [SerializeField] private bool Is2chase = false;
+
+
+
+    private void Update()
+    {
+     
+        if(Is2chase == true)
+        {
+            PlayerVision.transform.localScale += new Vector3(0.01f, 0.01f, 0.01f);
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            Vcam1.Priority = 0;
-            Vcam2.Priority = 1;
+            if (Vcam1 != null)
+            {
+                Vcam1.Priority = 0;
+                Vcam2.Priority = 1;
+            }
+            if(PlayerVision != null)
+            {
+                 Is2chase = true;
+            }
             BirdToActivate.GetComponent<BirdScript>().Active = true;
             BirdToActivate.GetComponent<AudioSource>().Play();
         }

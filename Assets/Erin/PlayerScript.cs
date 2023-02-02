@@ -66,7 +66,7 @@ public class PlayerScript : MonoBehaviour
             SpriteRend.flipX = true;
         }*/
      anim.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
-        
+        anim.SetFloat("Vertical", Input.GetAxis("Vertical"));
     }
 
     private void FixedUpdate()

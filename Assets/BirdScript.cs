@@ -48,7 +48,7 @@ public class BirdScript : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerScript>().Timer -= 2;
+            collision.gameObject.GetComponent<PlayerScript>().Timer -= 0.5f;
         }
     }
 
