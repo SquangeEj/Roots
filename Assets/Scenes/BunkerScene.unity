@@ -251,6 +251,92 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &516221659
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 262782985019681026, guid: 17e6cd1338e3b3e40a8e9611464ecd01, type: 3}
+      propertyPath: m_Name
+      value: Richard
+      objectReference: {fileID: 0}
+    - target: {fileID: 262782985019681027, guid: 17e6cd1338e3b3e40a8e9611464ecd01, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 262782985019681028, guid: 17e6cd1338e3b3e40a8e9611464ecd01, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 262782985019681028, guid: 17e6cd1338e3b3e40a8e9611464ecd01, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 262782985019681028, guid: 17e6cd1338e3b3e40a8e9611464ecd01, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 26.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 262782985019681028, guid: 17e6cd1338e3b3e40a8e9611464ecd01, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 262782985019681028, guid: 17e6cd1338e3b3e40a8e9611464ecd01, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 262782985019681028, guid: 17e6cd1338e3b3e40a8e9611464ecd01, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 262782985019681028, guid: 17e6cd1338e3b3e40a8e9611464ecd01, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 262782985019681028, guid: 17e6cd1338e3b3e40a8e9611464ecd01, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 262782985019681028, guid: 17e6cd1338e3b3e40a8e9611464ecd01, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 262782985019681028, guid: 17e6cd1338e3b3e40a8e9611464ecd01, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 262782985019681028, guid: 17e6cd1338e3b3e40a8e9611464ecd01, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 262782985136392510, guid: 17e6cd1338e3b3e40a8e9611464ecd01, type: 3}
+      propertyPath: m_text
+      value: 'You''re lucky those things dont know how to open doors.
+
+
+
+
+
+        I
+        wouldn''t wait too long, the growth wont.
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 262782985136392510, guid: 17e6cd1338e3b3e40a8e9611464ecd01, type: 3}
+      propertyPath: m_fontColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 262782985136392510, guid: 17e6cd1338e3b3e40a8e9611464ecd01, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 16777215
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 17e6cd1338e3b3e40a8e9611464ecd01, type: 3}
 --- !u!1 &729537385
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,7 +495,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5636307149244684395, guid: f032e37a739d4cd4ba3eb2d78db14e56, type: 3}
       propertyPath: orthographic size
-      value: 8.17
+      value: 13.7
       objectReference: {fileID: 0}
     - target: {fileID: 5636307149244684436, guid: f032e37a739d4cd4ba3eb2d78db14e56, type: 3}
       propertyPath: m_LocalPosition.x
@@ -636,7 +722,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1918116542}
   m_Lens:
     FieldOfView: 34
-    OrthographicSize: 8.17
+    OrthographicSize: 13.7
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
