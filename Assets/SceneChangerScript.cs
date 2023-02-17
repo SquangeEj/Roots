@@ -7,11 +7,14 @@ public class SceneChangerScript : MonoBehaviour
 {
     [SerializeField] private int SceneToLoad;
     [SerializeField] private GameObject StatsMan;
+    [SerializeField] private Animator anim;
+    [SerializeField] private bool Urgent = false;
 
 
 
     private void Start()
     {
+        anim = GetComponent<Animator>();
         StatsMan = GameObject.FindGameObjectWithTag("StatsManager");
     }
     private void OnTriggerEnter2D(Collider2D other)
@@ -20,10 +23,18 @@ public class SceneChangerScript : MonoBehaviour
         Debug.Log(other);
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("touched player");
-
-            StatsMan.GetComponent<StatsManagerScript>().GetTimer();
-            SceneManager.LoadScene(SceneToLoad);
+            anim.SetTrigger("LoadOut");
+            if(Urgent == true)
+            {
+                StatsMan.GetComponent<StatsManagerScript>().GetTimer();
+                SceneManager.LoadScene(SceneToLoad);
+            }
         }
+    }
+
+    public void Next()
+    {
+        StatsMan.GetComponent<StatsManagerScript>().GetTimer();
+        SceneManager.LoadScene(SceneToLoad);
     }
 }

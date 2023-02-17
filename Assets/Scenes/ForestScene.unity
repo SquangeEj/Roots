@@ -39706,6 +39706,10 @@ PrefabInstance:
       value: SceneChanger
       objectReference: {fileID: 0}
     - target: {fileID: 1257925041648555202, guid: f4275d445347ca14883c3f6d8c2fe048, type: 3}
+      propertyPath: Urgent
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257925041648555202, guid: f4275d445347ca14883c3f6d8c2fe048, type: 3}
       propertyPath: SceneToLoad
       value: 3
       objectReference: {fileID: 0}
