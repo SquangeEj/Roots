@@ -94,7 +94,7 @@ public class PlayerScript : MonoBehaviour
             }
             Speed = 6 * townmult;
         }
-        Debug.Log(stamina);
+      
         rb.MovePosition(rb.position + UserInput * (Speed * Time.deltaTime) * Timer/600);
     }
 
